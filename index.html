@@ -1,23 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>Xu Lu Portfolio</title>
-<style>
-body{
-margin:0;
-background:#111;
-}
-iframe{
-width:100%;
-height:100vh;
-border:none;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xu Lu – Portfolio ENSA Grenoble</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f5f3ee;
+      color: #1f1f1f;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      padding: 48px 20px 28px;
+      text-align: center;
+      background: linear-gradient(to bottom, #f7f4ee 0%, #efe9dd 100%);
+      border-bottom: 1px solid #ddd4c7;
+    }
+
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border: 1px solid #cfc3b2;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6a5f52;
+      background: rgba(255,255,255,0.55);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 52px);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.08;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 18px auto 0;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #5a5248;
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.2s ease;
+      border: 1px solid #1f1f1f;
+    }
+
+    .btn-primary {
+      background: #1f1f1f;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #000000;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #1f1f1f;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0,0,0,0.05);
+    }
+
+    .viewer-wrap {
+      width: 100%;
+      padding: 22px 16px 30px;
+    }
+
+    .viewer {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #ddd4c7;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .viewer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: #faf8f3;
+      border-bottom: 1px solid #e5ddd1;
+      font-size: 14px;
+      color: #5f564b;
+      flex-wrap: wrap;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 78vh;
+      border: none;
+      display: block;
+      background: #d8d2c8;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding: 0 20px 28px;
+      font-size: 13px;
+      color: #7a7166;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 36px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .pdf-frame {
+        height: 72vh;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="label">Portfolio</div>
+        <h1>Xu Lu</h1>
+        <p class="subtitle">
+          Portfolio présenté pour la candidature à l’ENSA Grenoble.
+          Cette sélection rassemble mes recherches autour de l’espace,
+          de la perception, de la matière et des formes de nature artificielle.
+        </p>
 
-<iframe src="portfolio-grenoble.pdf"></iframe>
+        <div class="actions">
+          <a class="btn btn-primary" href="#portfolio">Voir le portfolio</a>
+          <a class="btn btn-secondary" href="grenoble-portfolio-xulu.pdf" target="_blank">
+            Ouvrir le PDF directement
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <section class="viewer-wrap" id="portfolio">
+      <div class="viewer">
+        <div class="viewer-top">
+          <div>ENSA Grenoble · Portfolio de Xu Lu</div>
+          <div>PDF intégré à la page</div>
+        </div>
+
+        <iframe
+          class="pdf-frame"
+          src="grenoble-portfolio-xulu.pdf">
+        </iframe>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      Si le PDF ne s’affiche pas correctement sur votre navigateur, cliquez sur “Ouvrir le PDF directement”.
+    </div>
+  </div>
 </body>
 </html>
